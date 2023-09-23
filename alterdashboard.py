@@ -1,8 +1,9 @@
 import numpy as np
 import pandas as pd
 import streamlit as st
+import seaborn as sns
 #from pandas_profiling import ProfileReport
-from ydata_profiling import ProfileReport
+from pandas_profiling import ProfileReport
 from streamlit_pandas_profiling import st_profile_report
 
 # Web App Title
@@ -11,14 +12,12 @@ st.markdown('''
 
 This is the **EDA App** created in Streamlit using the **pandas-profiling** library.
 
-**Credit:** App built in `Python` + `Streamlit` by [Chanin Nantasenamat](https://medium.com/@chanin.nantasenamat) (aka [Data Professor](http://youtube.com/dataprofessor))
-
----
 ''')
 
 # Upload CSV data
 with st.sidebar.header('1. Upload your CSV data'):
     uploaded_file = st.sidebar.file_uploader("Upload your input CSV file", type=["csv"])
+    df = sns.load_dataset('titanic')
     st.sidebar.markdown("""
 [Example CSV input file](https://raw.githubusercontent.com/dataprofessor/data/master/delaney_solubility_with_descriptors.csv)
 """)
