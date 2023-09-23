@@ -49,7 +49,7 @@ numpy==1.23.5
 openpyxl==3.0.10
 packaging==23.1
 pandas==2.0.3
-pandas-profiling
+pandas-profiling==3.2.0
 parso==0.8.3
 patsy==0.5.3
 phik==0.12.3
@@ -110,6 +110,5 @@ watchdog==3.0.0
 wcwidth==0.2.6
 widgetsnbextension==4.0.9
 wordcloud==1.9.2
-ydata-profiling
+ydata-profiling==4.5.1
 zipp==3.16.2
-
